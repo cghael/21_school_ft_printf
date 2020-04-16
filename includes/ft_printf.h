@@ -180,7 +180,7 @@ char					*ft_strpcpy(char *start, char *end);
 void					ft_percent_treat(t_arg *ap_t, t_res *buf_t);
 void 					ft_choose_func(t_arg *ap_t, t_res *buf_t, \
 							t_ftptf *tmp_t);
-void					ft_error_exit(char *str, t_res *buf_t);
+void					ft_error_exit(char *str, void *mem);
 char					*ft_dollar_treat(char *p, t_ftptf *tmp_t, t_arg *ap_t);
 int						ft_isbigger(int a, int b);
 char					*ft_strcpy_dptp(char *dst, char *src, char *end);

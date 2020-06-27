@@ -21,7 +21,7 @@
 
 int						ft_abs(int i)
 {
-	unsigned int		res;
+	int		res;
 
 	res = i;
 	if (i < 0)

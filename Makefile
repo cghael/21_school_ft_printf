@@ -20,7 +20,7 @@ INCLUDES = -I$(HEADERS_DIR) -I$(LIBFT_HEADERS)
 
 LIBFT = $(LIBFT_DIR)libft.a
 LIBFT_DIR = libft/
-LIBFT_HEADERS = $(LIBFT_DIR)includes/
+LIBFT_HEADERS = $(LIBFT_DIR)inc/
 
 HEADERS_LIST = ft_printf.h
 HEADERS_DIR = includes/

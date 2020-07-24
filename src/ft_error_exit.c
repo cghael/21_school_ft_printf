@@ -12,10 +12,10 @@
 
 #include "ft_printf.h"
 
-void	ft_error_exit(char *str, void *mem)
+void	ft_error_exit(char *str, t_res *buf_t)
 {
 	write(2, str, ft_strlen(str));
-	if (mem)
-		free(mem);
+	if (buf_t->res)
+		free(buf_t->res);
 	exit(1);
 }

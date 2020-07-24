@@ -31,15 +31,14 @@
 ** Stack Overflow - https://vk.cc/aiVRsC
 ** https://en.wikipedia.org/wiki/ANSI_escape_code#24-bit
 ** Templates to use colors:
+** # define RED "\e[1;31m"
+** # define GRN "\e[1;32m"
+** # define YEL "\e[1;33m"
+** # define BLU "\e[1;34m"
+** # define MAG "\e[1;35m"
+** # define CYN "\e[1;36m"
+** # define END "\e[m"
 */
-# define RED "\e[1;31m"
-# define GRN "\e[1;32m"
-# define YEL "\e[1;33m"
-# define BLU "\e[1;34m"
-# define MAG "\e[1;35m"
-# define CYN "\e[1;36m"
-# define END "\e[m"
-
 
 /*
 ** --------------------------- Macros \ Static ---------------------------------
@@ -181,7 +180,7 @@ char					*ft_strpcpy(char *start, char *end);
 void					ft_percent_treat(t_arg *ap_t, t_res *buf_t);
 void 					ft_choose_func(t_arg *ap_t, t_res *buf_t, \
 							t_ftptf *tmp_t);
-void					ft_error_exit(char *str, void *mem);
+void					ft_error_exit(char *str, t_res *buf_t);
 char					*ft_dollar_treat(char *p, t_ftptf *tmp_t, t_arg *ap_t);
 int						ft_isbigger(int a, int b);
 char					*ft_strcpy_dptp(char *dst, char *src, char *end);

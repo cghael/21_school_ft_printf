@@ -72,7 +72,9 @@ SRC_LIST = ft_abs.c \
 			ft_exeption_treat.c \
 			ft_integer_to_str.c \
 			ft_add_dig_to_int.c \
-			ft_width_n_precision.c
+			ft_width_n_precision.c \
+			ft_add_float_to_str.c \
+			ft_put_div_by_one.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))
 
@@ -92,9 +94,9 @@ END = \033[0m
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJ_DIR) $(OBJ)
-	cp $(LIBFT) ./$(NAME)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@cp $(LIBFT) ./$(NAME)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 	@echo "\n$(NAME): $(GRN)*.o files created$(END)"
 	@echo "$(NAME): $(GRN)$(NAME) created$(END)"
 

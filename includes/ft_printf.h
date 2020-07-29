@@ -178,7 +178,7 @@ char					*ft_parse_spec(char *p, t_ftptf *ptf_str);
 int						ft_find_in_def(char *define_line, char *p);
 char					*ft_strpcpy(char *start, char *end);
 void					ft_percent_treat(t_arg *ap_t, t_res *buf_t);
-void 					ft_choose_func(t_arg *ap_t, t_res *buf_t, \
+void					ft_choose_func(t_arg *ap_t, t_res *buf_t, \
 							t_ftptf *tmp_t);
 void					ft_error_exit(char *str, t_res *buf_t);
 char					*ft_dollar_treat(char *p, t_ftptf *tmp_t, t_arg *ap_t);
@@ -204,6 +204,8 @@ char					*ft_integer_to_str(t_fstring *numb);
 t_fstring				*ft_add_dig_to_int(t_fstring *numb);
 char					*ft_width_n_precision(char *p, t_ftptf *tmp_t, \
 							t_arg *ap_t);
+t_fstring				*ft_add_float_to_str(t_fstring *numb, t_ftptf tmp_t);
+void					ft_put_div_by_one(int div[]);
 
 /*
 ** ---------------- Buffer management functions

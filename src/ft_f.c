@@ -97,11 +97,13 @@ void				ft_f(t_arg *ap_t, t_res *buf_t, t_ftptf *tmp_t)
 	res.value = ft_dollar_float(tmp_t->dollar[0], ap_t, *tmp_t);
 	if (res.number.sign)
 		tmp_t->sign = '-';
+	if (tmp_t->dot == 0 && tmp_t->spec != 'G' && tmp_t->spec != 'g')
+		tmp_t->precision = 6;
 	tmp = ft_exception_treat(res, tmp_t);
 	tmp = ft_add_sign(tmp, tmp_t);
 	len = ft_strlen(tmp);
-	if ((tmp_t->octo && tmp_t->spec == 'f' && tmp_t->precision == 0) \
-			&& tmp_t->spec != 'G' && tmp_t->spec != 'g')
+	if ((tmp_t->octo && tmp_t->spec == 'f' && tmp_t->precision == 0) && \
+			tmp_t->spec != 'G' && tmp_t->spec != 'g')
 		tmp = ft_add_dot(tmp);
 	if (tmp_t->width > len)
 		tmp = ft_width_treat(tmp_t->width, tmp, *tmp_t);

@@ -50,12 +50,13 @@ set(SOURCE_LIBFTPRINTF
         src/ft_u64toa_base.c
         src/ft_width_n_precision.c
         src/ft_width_treat.c
-        src/ft_x.c)
+        src/ft_add_float_to_str.c
+        src/ft_x.c
+        src/ft_put_div_by_one.c)
 
 include_directories(includes)
 include_directories(libft/inc)
 
-#add_executable(libftprintf)
 add_library(libftprintf STATIC ${SOURCE_LIBFTPRINTF})
 
 add_subdirectory(libft)

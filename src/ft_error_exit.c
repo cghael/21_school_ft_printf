@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_error_exit(char *str, t_res *buf_t) //todo check
+void	ft_error_exit(char *str, t_res *buf_t)
 {
 	write(2, str, ft_strlen(str));
 	if (buf_t && buf_t->res)

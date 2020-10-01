@@ -172,6 +172,7 @@ typedef struct			s_type
 
 int						ft_abs(int i);
 int						ft_printf(const char *format, ...);
+int						ft_dprintf(int fd, const char *format, ...);
 int						ft_parsing(t_arg *ap_t, t_ftptf *tmp_t, t_res *buf_t);
 char					*ft_parse_flags(char *p, t_ftptf *ptf_str, t_arg *ap_t);
 char					*ft_parse_spec(char *p, t_ftptf *ptf_str);
@@ -193,7 +194,7 @@ char					*ft_num_to_str(void *val, t_ftptf tmp_t, int l_size);
 char					*ft_precision_treat(char *tmp, t_ftptf tmp_t);
 int						ft_bzero_buf_n_set_pointers(t_res *buf_t, \
 							const char *format);
-int						ft_final_print_n_free_rt_len(t_res *buf_t);
+int						ft_final_print_n_free_rt_len(int fd, t_res *buf_t);
 void					ft_add_specials(char *res, t_ftptf tmp_t);
 char					*ft_exception_treat(t_float res, t_ftptf *tmp_t);
 char					*ft_count_float(t_float res, t_ftptf tmp_t);
@@ -211,7 +212,7 @@ void					ft_put_div_by_one(int div[]);
 ** ---------------- Buffer management functions
 */
 
-void					ft_buff_print_n_len(t_res *buf_t, char *src);
+void					ft_buff_print_n_len(int fd, t_res *buf_t, char *src);
 void					ft_buff_free(t_res *buf_t);
 void					ft_buff_print_free(t_res *buf_t);
 void					ft_buff_finded_percent(t_res *buf_t);

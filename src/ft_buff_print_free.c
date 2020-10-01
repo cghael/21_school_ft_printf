@@ -24,23 +24,23 @@ void		ft_buff_print_free(t_res *buf_t)
 
 	if (!buf_t->p_perc && buf_t->percent_treated == 0)
 	{
-		ft_buff_print_n_len(buf_t, buf_t->buf);
-		ft_buff_print_n_len(buf_t, buf_t->p_tmp);
+		ft_buff_print_n_len(1, buf_t, buf_t->buf);
+		ft_buff_print_n_len(1, buf_t, buf_t->p_tmp);
 		ft_buff_free(buf_t);
 	}
 	else if (buf_t->percent_treated == 1)
 	{
-		ft_buff_print_n_len(buf_t, buf_t->buf);
+		ft_buff_print_n_len(1, buf_t, buf_t->buf);
 		if (!(tmp = ft_strpcpy(buf_t->p_tmp, buf_t->p_perc)))
 			ft_error_exit("malloc error", buf_t);
-		ft_buff_print_n_len(buf_t, tmp);
+		ft_buff_print_n_len(1, buf_t, tmp);
 		ft_buff_free(buf_t);
 		free(tmp);
 	}
 	else
 	{
-		ft_buff_print_n_len(buf_t, buf_t->buf);
-		ft_buff_print_n_len(buf_t, buf_t->res);
+		ft_buff_print_n_len(1, buf_t, buf_t->buf);
+		ft_buff_print_n_len(1, buf_t, buf_t->res);
 		ft_buff_free(buf_t);
 	}
 }

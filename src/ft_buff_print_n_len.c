@@ -18,7 +18,7 @@
 ** write it to buf_t->len
 */
 
-void			ft_buff_print_n_len(t_res *buf_t, char *src)
+void			ft_buff_print_n_len(int fd, t_res *buf_t, char *src)
 {
 	size_t		buf_len;
 	char		eol;
@@ -35,6 +35,6 @@ void			ft_buff_print_n_len(t_res *buf_t, char *src)
 			buf_len++;
 		buf_t->eol_c = 0;
 	}
-	write(1, src, buf_len);
+	write(fd, src, buf_len);
 	buf_t->len += buf_len;
 }

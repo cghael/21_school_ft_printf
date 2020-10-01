@@ -12,8 +12,8 @@
 
 #include "ft_printf.h"
 
-int		ft_final_print_n_free_rt_len(t_res *buf_t)
+int		ft_final_print_n_free_rt_len(int fd, t_res *buf_t)
 {
-	ft_buff_print_n_len(buf_t, buf_t->buf);
+	ft_buff_print_n_len(fd, buf_t, buf_t->buf);
 	return (buf_t->len);
 }

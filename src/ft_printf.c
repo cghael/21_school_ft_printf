@@ -42,7 +42,7 @@ int				ft_printf(const char *format, ...)
 			break ;
 	}
 	va_end(ap_t.n_arg);
-	return (ft_final_print_n_free_rt_len(0, &buf_t));
+	return (ft_final_print_n_free_rt_len(1, &buf_t));
 }
 
 int				ft_dprintf(int fd, const char *format, ...)
